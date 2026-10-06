@@ -345,3 +345,117 @@ h1 {
   color: var(--muted);
   margin-bottom: 0;
 }
+
+/* Wyszukiwarka */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 12px;
+}
+.brand, .topbar-link { flex-shrink: 0; }
+.service-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  max-width: 420px;
+  margin: 0;
+  padding: 6px 10px;
+  background: #fff4e8;
+  border: 2px solid var(--orange);
+  border-radius: 12px;
+}
+.service-search:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(23,105,170,.18);
+}
+.service-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+.service-search input::placeholder {
+  color: var(--blue-dark);
+  opacity: 1;
+}
+.search-submit, .search-clear {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--blue-dark);
+  cursor: pointer;
+}
+.search-clear { font-size: 1.6rem; }
+.search-submit:focus-visible, .search-clear:focus-visible {
+  outline: 2px solid var(--blue);
+}
+.service-card[hidden], .search-clear[hidden] { display: none; }
+#start, section[id] { scroll-margin-top: 110px; }
+@media (max-width: 600px) {
+  .topbar { flex-wrap: wrap; gap: 10px; }
+  .service-search {
+    order: 3;
+    flex: 0 0 100%;
+    max-width: none;
+  }
+  #start, section[id] { scroll-margin-top: 160px; }
+}
+
+/* Rozwijane kategorie */
+.service-grid { align-items: start; }
+.service-details summary {
+  cursor: pointer;
+  color: var(--blue);
+  padding: 6px 0;
+}
+.service-details summary h3 {
+  display: inline;
+  margin: 0;
+}
+.service-details[open] summary {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.service-card .service-hint {
+  font-size: .9rem;
+  margin-bottom: 10px;
+}
+.service-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-option {
+  display: block;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--blue-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+.service-option:hover,
+.service-option:focus-visible {
+  background: #fff4e8;
+  border-color: var(--orange);
+}
+.service-option:focus-visible,
+.service-details summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}

@@ -9,9 +9,37 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#start" aria-label="Fix and Spacebook - strona glowna">
+    <a class="brand" href="#start"
+       aria-label="Fix and Spacebook - strona główna">
       Fix<span>&amp;</span>Spacebook
     </a>
+
+    <form id="service-search-form" class="service-search" role="search">
+      <button class="search-submit" type="submit"
+              aria-label="Wyszukaj kategorię">
+        <svg width="20" height="20" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             aria-hidden="true" focusable="false">
+          <circle cx="10.5" cy="10.5" r="6.5"></circle>
+          <path d="M16 16l5 5"></path>
+        </svg>
+      </button>
+
+      <input
+        id="service-search"
+        type="search"
+        placeholder="Szukaj usługi…"
+        aria-label="Szukaj kategorii usług"
+        aria-controls="uslugi"
+        autocomplete="off"
+      >
+
+      <button id="clear-service-search" class="search-clear"
+              type="button" aria-label="Wyczyść wyszukiwanie" hidden>
+        ×
+      </button>
+    </form>
+
     <a class="topbar-link" href="#uslugi">Kategorie</a>
   </header>
 
@@ -136,31 +164,7 @@
       </form>
     </section>
 
-    <section id="uslugi" class="services" aria-labelledby="services-title">
-      <div class="section-heading">
-        <p class="eyebrow">Pierwsze kategorie</p>
-        <h2 id="services-title">Jakiej pomocy szukasz?</h2>
-      </div>
-
-      <div class="service-grid">
-        <article class="service-card">
-          <h3>Naprawy</h3>
-          <p>Samochody, rowery, AGD i RTV.</p>
-        </article>
-        <article class="service-card">
-          <h3>Dom i ogrod</h3>
-          <p>Sprzatanie, drobne prace i pomoc w ogrodzie.</p>
-        </article>
-        <article class="service-card">
-          <h3>Przeprowadzki</h3>
-          <p>Transport, noszenie i organizacja przeprowadzki.</p>
-        </article>
-        <article class="service-card">
-          <h3>Opieka</h3>
-          <p>Pomoc przy zwierzetach i codziennych sprawach.</p>
-        </article>
-      </div>
-    </section>
+    <section id="uslugi" class="services" aria-labelledby="services-title"><div class="section-heading"><p class="eyebrow">Kategorie usług</p><h2 id="services-title">Jakiej pomocy szukasz?</h2><p>Dotknij kategorii, aby rozwinąć listę usług.</p></div><div class="service-grid"><article class="service-card"><details class="service-details"><summary><h3>Naprawy</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy samochodow" data-service-name="Samochody">Samochody</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy rowerow" data-service-name="Rowery">Rowery</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy AGD i RTV" data-service-name="AGD i RTV">AGD i RTV</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3>Dom i ogród</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Sprzatanie" data-service-name="Sprzątanie">Sprzątanie</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Prace ogrodowe" data-service-name="Prace ogrodowe">Prace ogrodowe</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usluga" data-service-name="Drobne prace domowe">Drobne prace domowe</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3>Przeprowadzki</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Transport">Transport</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Noszenie rzeczy">Noszenie rzeczy</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Pomoc w pakowaniu">Pomoc w pakowaniu</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3>Opieka</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Opieka nad zwierzetami" data-service-name="Opieka nad zwierzętami">Opieka nad zwierzętami</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usluga" data-service-name="Pomoc w codziennych sprawach">Pomoc w codziennych sprawach</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3>Inne</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usluga" data-service-name="Pomoc w zakupach">Pomoc w zakupach</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usluga" data-service-name="Porady zdalne">Porady zdalne</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usluga" data-service-name="Inna usługa">Inna usługa</a></div></details></article></div></section>
 
     <section id="dodaj-zlecenie" class="request-section" aria-labelledby="request-title">
       <div class="section-heading">
