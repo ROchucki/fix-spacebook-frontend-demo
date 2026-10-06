@@ -15,47 +15,47 @@ const providerCategorySelect = document.querySelector("#provider-category");
 const providerDescription = document.querySelector("#provider-description");
 
 const descriptionPlaceholders = {
-  "Naprawy samochodow":
-    "Np. Samochod nie odpala. Potrzebuje diagnostyki i naprawy.",
-  "Naprawy rowerow":
-    "Np. Przerzutki przeskakuja podczas jazdy. Potrzebuje regulacji lub wymiany linki.",
+  "Naprawy samochodów":
+    "Np. Samochód nie odpala. Potrzebuję diagnostyki i naprawy.",
+  "Naprawy rowerów":
+    "Np. Przerzutki przeskakują podczas jazdy. Potrzebuję regulacji lub wymiany linki.",
   "Naprawy AGD i RTV":
-    "Np. Pralka nie odprowadza wody. Potrzebuje diagnozy i naprawy.",
-  Sprzatanie:
-    "Np. Potrzebuje sprzatania mieszkania po remoncie.",
+    "Np. Pralka nie odprowadza wody. Potrzebuję diagnozy i naprawy.",
+  Sprzątanie:
+    "Np. Potrzebuję sprzątania mieszkańia po remoncie.",
   "Prace ogrodowe":
-    "Np. Potrzebuje skoszenia trawy i przyciecia zywoplotu.",
+    "Np. Potrzebuję skoszenia trawy i przycięcia żywopłotu.",
   Przeprowadzki:
-    "Np. Potrzebuje transportu mebli z Mokotowa na Prage.",
-  "Opieka nad zwierzetami":
-    "Np. Potrzebuje opieki nad psem w weekend.",
-  "Inna usluga":
-    "Np. Opisz dokladnie, jakiej pomocy potrzebujesz."
+    "Np. Potrzebuję transportu mebli z Mokotówa na Pragę.",
+  "Opieka nad zwierzętami":
+    "Np. Potrzebuję opieki nad psem w weekend.",
+  "Inna usługa":
+    "Np. Opisz dokładnie, jakiej pomocy potrzebujesz."
 };
 
 const defaultDescriptionPlaceholder =
-  "Np. Opisz problem, miejsce wykonania uslugi i oczekiwany termin.";
+  "Np. Opisz problem, miejsce wykonania usługi i oczekiwany termin.";
 const providerDescriptionPlaceholders = {
-  "Naprawy samochodow":
-    "Np. Oferuje diagnostyke, naprawy silnika, hamulcow i zawieszenia.",
-  "Naprawy rowerow":
-    "Np. Oferuje regulacje przerzutek, hamulcow i podstawowe naprawy rowerow.",
+  "Naprawy samochodów":
+    "Np. Oferuję diagnostykę, naprawy silnika, hamulców i zawieszenia.",
+  "Naprawy rowerów":
+    "Np. Oferuję regulację przerzutek, hamulców i podstawowe naprawy rowerów.",
   "Naprawy AGD i RTV":
-    "Np. Oferuje diagnoze i naprawy pralek, lodowek oraz drobnego AGD.",
-  Sprzatanie:
-    "Np. Oferuje sprzatanie mieszkan po remoncie, generalne porzadki i regularne sprzatanie.",
+    "Np. Oferuję diagnozę i naprawy pralek, lodówek oraz drobnego AGD.",
+  Sprzątanie:
+    "Np. Oferuję sprzątanie mieszkań po remoncie, generalne porządki i regularne sprzątanie.",
   "Prace ogrodowe":
-    "Np. Oferuje koszenie trawy, pielegnacje ogrodu i przycinanie zywoplotow.",
+    "Np. Oferuję koszenie trawy, pielęgnację ogrodu i przycinanie żywopłotów.",
   Przeprowadzki:
-    "Np. Oferuje transport mebli, noszenie rzeczy i pomoc przy przeprowadzkach.",
-  "Opieka nad zwierzetami":
-    "Np. Oferuje spacery z psami, opieke podczas wyjazdow i karmienie zwierzat.",
-  "Inna usluga":
-    "Np. Opisz konkretnie, jakie uslugi oferujesz i dla kogo."
+    "Np. Oferuję transport mebli, noszenie rzeczy i pomoc przy przeprowadzkach.",
+  "Opieka nad zwierzętami":
+    "Np. Oferuję spacery z psąmi, opiekę podczas wyjazdów i karmienie zwierząt.",
+  "Inna usługa":
+    "Np. Opisz konkretnie, jakie usługi oferujesz i dla kogo."
 };
 
 const defaultProviderDescriptionPlaceholder =
-  "Np. Opisz zakres uslug, doswiadczenie i obszar dzialania.";
+  "Np. Opisz zakres usług, doświadczenie i obszar działania.";
 
 
 function updateDescriptionPlaceholder() {
@@ -126,8 +126,8 @@ if (requestForm) {
     const category = requestForm.elements.category.value;
 
     formMessage.textContent =
-      `Dziekujemy. Testowe zlecenie w kategorii "${category}" zostalo przygotowane. ` +
-      "W MVP dane nie sa jeszcze zapisywane.";
+      `Dziękujemy. Testowe zlecenie w kategorii "${category}" zostało przygotowane. ` +
+      "W MVP dane nie są jeszcze zapisywane.";
 
     requestForm.reset();
     updateDescriptionPlaceholder();
@@ -149,13 +149,13 @@ if (providerForm) {
     if (providerPreview) {
       providerPreview.hidden = false;
       providerPreview.innerHTML =
-        `<h3>Podglad testowej oferty</h3>` +
+        `<h3>Podgląd testowej oferty</h3>` +
         `<p>Wykonawca: ${providerName}</p>`;
     }
 
     providerFormMessage.textContent =
-      `Dziekujemy. Testowa oferta wykonawcy "${providerName}" zostala przygotowana. ` +
-      "W MVP dane nie sa jeszcze zapisywane.";
+      `Dziękujemy. Testowa oferta wykonawcy "${providerName}" została przygotowana. ` +
+      "W MVP dane nie są jeszcze zapisywane.";
 
     providerForm.reset();
   });
