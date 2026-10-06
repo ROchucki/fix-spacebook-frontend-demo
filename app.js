@@ -148,9 +148,12 @@ if (providerForm) {
 
     if (providerPreview) {
       providerPreview.hidden = false;
-      providerPreview.innerHTML =
-        `<h3>Podgląd testowej oferty</h3>` +
-        `<p>Wykonawca: ${providerName}</p>`;
+      providerPreview.replaceChildren();
+      const previewHeading = document.createElement("h3");
+      previewHeading.textContent = "Podgląd testowej oferty";
+      const previewName = document.createElement("p");
+      previewName.textContent = `Wykonawca: ${providerName}`;
+      providerPreview.append(previewHeading, previewName);
     }
 
     providerFormMessage.textContent =
@@ -158,6 +161,7 @@ if (providerForm) {
       "W MVP dane nie są jeszcze zapisywane.";
 
     providerForm.reset();
+    updateProviderDescriptionPlaceholder();
   });
 }
 
