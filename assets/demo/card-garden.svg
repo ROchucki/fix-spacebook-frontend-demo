@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Domyślna ilustracja: pielęgnacja ogrodu</title>
+  <desc id="desc">Prosta demonstracyjna ilustracja ogrodu z narzędziem.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#EDF9EB"/>
+      <stop offset="100%" stop-color="#D9F2CC"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <rect x="0" y="370" width="800" height="230" fill="#B9E0A3"/>
+  <circle cx="120" cy="120" r="72" fill="#F9E699"/>
+  <path d="M160 250c-30-50-150-30-140 65 19 170 280 148 285 0 9-86-83-114-145-65z" fill="#74B86C"/>
+  <path d="M355 230c-12-62-90-95-125-44-33 50 8 126 72 128 46 2 70-32 53-84z" fill="#69A85E"/>
+  <path d="M575 240c-20-87-118-113-150-54-32 58 19 148 90 150 56 2 77-38 60-96z" fill="#6DB172"/>
+  <path d="M500 410l60-92 70 92z" fill="#B97B32"/>
+  <path d="M565 420h105v38H565z" fill="#8A5F2C"/>
+  <path d="M520 380h42v95h-42z" fill="#C48A41"/>
+  <path d="M585 332l110 88-34 18-110-88z" fill="#D9A16B"/>
+  <circle cx="560" cy="270" r="24" fill="#6DB172"/>
+  <path d="M220 410h140c18 0 32 14 32 32v40H188v-40c0-18 14-32 32-32z" fill="#86C679"/>
+  <path d="M305 355l82 90-39 36-82-90z" fill="#F7C65F"/>
+  <path d="M360 350l36 40-100 100-36-40z" fill="#D7903B"/>
+  <text x="400" y="520" font-size="38" text-anchor="middle" fill="#234C2D" font-family="Arial, sans-serif" font-weight="700">Pielęgnacja ogrodu</text>
+</svg>

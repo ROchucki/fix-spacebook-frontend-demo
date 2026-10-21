@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Domyślna ilustracja: sprzątanie mieszkania</title>
+  <desc id="desc">Prosta demonstracyjna ilustracja sprzątania mieszkania.</desc>
+  <defs>
+    <linearGradient id="bg6" x1="0" x2="1">
+      <stop offset="0%" stop-color="#F9F3FF"/>
+      <stop offset="100%" stop-color="#E9E8FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg6)"/>
+  <rect x="120" y="160" width="560" height="260" rx="28" fill="#FFFFFE" stroke="#C5B9FF" stroke-width="8"/>
+  <rect x="160" y="210" width="110" height="110" rx="18" fill="#E8EBFF" stroke="#8B91E8" stroke-width="6"/>
+  <rect x="300" y="210" width="110" height="110" rx="18" fill="#E8EBFF" stroke="#8B91E8" stroke-width="6"/>
+  <rect x="440" y="210" width="110" height="110" rx="18" fill="#E8EBFF" stroke="#8B91E8" stroke-width="6"/>
+  <path d="M180 430h420c18 0 32 14 32 32v18H148v-18c0-18 14-32 32-32z" fill="#C5B9FF"/>
+  <path d="M640 170l82 102-22 18-82-102z" fill="#F0C669"/>
+  <path d="M618 150l50 65-62 30-50-65z" fill="#E0AF40"/>
+  <path d="M575 325c0-42 24-74 60-74s60 32 60 74" fill="none" stroke="#D2A73D" stroke-width="16" stroke-linecap="round"/>
+  <path d="M661 309l82 18" stroke="#D2A73D" stroke-width="12" stroke-linecap="round"/>
+  <path d="M196 424c26-40 70-62 132-62 60 0 108 26 140 62" fill="none" stroke="#8B91E8" stroke-width="10" stroke-linecap="round"/>
+  <text x="400" y="520" font-size="38" text-anchor="middle" fill="#413B7E" font-family="Arial, sans-serif" font-weight="700">Sprzątanie mieszkania</text>
+</svg>
