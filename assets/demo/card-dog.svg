@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Domyślna ilustracja: spacer z psem</title>
+  <desc id="desc">Prosta demonstracyjna ilustracja spaceru z psem.</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" x2="1">
+      <stop offset="0%" stop-color="#FFF5E5"/>
+      <stop offset="100%" stop-color="#FDE3C3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  <path d="M0 420c120-55 180-66 260-28 70 34 120 30 170 10 67-27 130-15 210 36v162H0z" fill="#F6D7A6"/>
+  <ellipse cx="260" cy="255" rx="120" ry="90" fill="#E9A45B"/>
+  <circle cx="260" cy="220" r="58" fill="#F2C08D"/>
+  <circle cx="230" cy="215" r="7" fill="#2B1F1A"/>
+  <circle cx="290" cy="215" r="7" fill="#2B1F1A"/>
+  <path d="M260 235q14 12 28 0" stroke="#2B1F1A" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M318 250l72 110" stroke="#E9A45B" stroke-width="18" stroke-linecap="round"/>
+  <path d="M360 370l48-102" stroke="#D68B3C" stroke-width="14" stroke-linecap="round"/>
+  <path d="M404 266l78-110" stroke="#D68B3C" stroke-width="12" stroke-linecap="round"/>
+  <rect x="430" y="200" width="120" height="75" rx="18" fill="#FFFFFF" opacity="0.8"/>
+  <path d="M460 215c40 0 70 18 70 42 0 26-26 46-70 46s-70-20-70-46c0-24 30-42 70-42z" fill="#DFF0FF"/>
+  <path d="M180 335l130 90" stroke="#6D4C3A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M140 338c18-28 44-37 72-34" stroke="#6D4C3A" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="400" y="520" font-size="38" text-anchor="middle" fill="#5C3E22" font-family="Arial, sans-serif" font-weight="700">Spacer z psem</text>
+</svg>

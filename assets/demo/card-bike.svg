@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Domyślna ilustracja: regulacja roweru</title>
+  <desc id="desc">Prosta demonstracyjna ilustracja roweru i narzędzi.</desc>
+  <defs>
+    <linearGradient id="bg5" x1="0" x2="1">
+      <stop offset="0%" stop-color="#EAF7FF"/>
+      <stop offset="100%" stop-color="#DAF2F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  <circle cx="255" cy="360" r="104" fill="none" stroke="#3A7590" stroke-width="12"/>
+  <circle cx="550" cy="360" r="104" fill="none" stroke="#3A7590" stroke-width="12"/>
+  <path d="M255 360l150-135 145 135M405 225l-10 135" stroke="#3A7590" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M392 225h80l80 135" stroke="#3A7590" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M355 250l65 95" stroke="#E6B84E" stroke-width="12" stroke-linecap="round"/>
+  <path d="M255 360l-60 105" stroke="#3A7590" stroke-width="14" stroke-linecap="round"/>
+  <path d="M550 360l90 85" stroke="#3A7590" stroke-width="14" stroke-linecap="round"/>
+  <path d="M600 160l110 60-30 50-110-60z" fill="#DBA644"/>
+  <path d="M647 148l65 38-10 26-66-39z" fill="#C58C2E"/>
+  <path d="M176 170l90 64" stroke="#C58C2E" stroke-width="14" stroke-linecap="round"/>
+  <text x="400" y="520" font-size="38" text-anchor="middle" fill="#1D4F66" font-family="Arial, sans-serif" font-weight="700">Regulacja roweru</text>
+</svg>
