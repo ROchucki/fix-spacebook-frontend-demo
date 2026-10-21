@@ -1,269 +1,65 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fix&Spacebook - platforma lokalnych usług w Polsce.">
-  <title>Fix&Spacebook | Lokalne usługi</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fix&Spacebook — demonstracja platformy lokalnych usług.">
+<title>Fix&Spacebook | Demo</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#start"
-       aria-label="Fix and Spacebook - strona główna">
-      Fix<span>&amp;</span>Spacebook
-    </a>
-
-    <form id="service-search-form" class="service-search" role="search">
-      <button class="search-submit" type="submit"
-              aria-label="Wyszukaj kategorię">
-        <svg width="20" height="20" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" stroke-width="2"
-             aria-hidden="true" focusable="false">
-          <circle cx="10.5" cy="10.5" r="6.5"></circle>
-          <path d="M16 16l5 5"></path>
-        </svg>
-      </button>
-
-      <input
-        id="service-search"
-        type="search"
-        placeholder="Szukaj usługi…"
-        aria-label="Szukaj kategorii usług"
-        aria-controls="uslugi"
-        autocomplete="off"
-      >
-
-      <button id="clear-service-search" class="search-clear"
-              type="button" aria-label="Wyczyść wyszukiwanie" hidden>
-        ×
-      </button>
-    </form>
-
-    <a class="topbar-link" href="#uslugi">Kategorie</a>
-  </header>
-
-  <main id="start">
-    <section class="hero">
-      <p class="eyebrow">Lokalne usługi w jednym miejscu</p>
-      <h1>Znajdź pomoc lub zaoferuj swoje usługi.</h1>
-      <p class="lead">
-        Fix&amp;Spacebook łączy osoby, które potrzebują pomocy,
-        z lokalnymi wykonawcami i firmami.
-      </p>
-
-      <div class="actions" aria-label="Wybierz dalszy krok">
-        <a class="button button-primary" href="#dodaj-zlecenie">
-          Szukam zlecę
-        </a>
-        <button class="button button-secondary" type="button" data-action="provider">
-          Chcę oferować
-        </button>
-      </div>
-
-      <p id="message" class="message" role="status" aria-live="polite"></p>
-    </section>
-
-    <section id="oferta-wykonawcy" class="request-section" aria-labelledby="provider-title" hidden>
-      <div class="section-heading">
-        <p class="eyebrow">Dla wykonawcy usług</p>
-        <h2 id="provider-title">Dodaj ofertę usług</h2>
-        <p class="lead">
-          Opisz, jakie usługi oferujesz. W MVP oferta nie jest jeszcze zapisywana.
-        </p>
-      </div>
-
-      <article id="provider-preview" hidden>
-        <h3>Podgląd testowej oferty</h3>
-        <p>Tu po wysłaniu formularza pojawi się oferta.</p>
-      </article>
-
-      <form id="provider-form" class="request-form">
-        <div class="form-field">
-          <label for="provider-name">Nazwa wykonawcy lub firmy</label>
-          <input
-            id="provider-name"
-            name="providerName"
-            type="text"
-            autocomplete="organization"
-            placeholder="Np. Serwis Rowerowy Zielona 12"
-            required
-          >
-        </div>
-
-        <div class="form-field">
-          <label for="provider-category">Kategoria usługi</label>
-          <select id="provider-category" name="providerCategory" required>
-            <option value="">Wybierz kategorię</option>
-            <option>Naprawy samochodów</option>
-            <option>Naprawy rowerów</option>
-            <option>Naprawy AGD i RTV</option>
-            <option>Sprzątanie</option>
-            <option>Prace ogrodowe</option>
-            <option>Przeprowadzki</option>
-            <option>Opieka nad zwierzętami</option>
-            <option>Inna usługa</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <div class="form-field">
-            <label for="provider-location">Lokalizacja</label>
-            <input
-              id="provider-location"
-              name="providerLocation"
-              type="text"
-              placeholder="Np. Warszawa, Mokotów"
-              required
-            >
-          </div>
-
-          <div class="form-field">
-            <label for="provider-area">Promień dojazdu</label>
-            <select id="provider-area" name="providerArea" required>
-              <option value="">Wybierz promień</option>
-              <option value="0">Tylko w mieście</option>
-              <option value="10">Do 10 km</option>
-              <option value="25">Do 25 km</option>
-              <option value="50">Do 50 km</option>
-              <option value="100">Do 100 km</option>
-              <option value="indywidualnie">Ustalę indywidualnie</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-field">
-          <label for="provider-description">Opis oferty i doświadczenia</label>
-          <textarea
-            id="provider-description"
-            name="providerDescription"
-            rows="5"
-            minlength="20"
-            placeholder="Np. Od 5 lat serwisuję rowery. Oferuję regulację hamulców, przerzutek i podstawowe naprawy."
-            required
-          ></textarea>
-          <p class="field-help">
-            Minimum 20 znaków. Opisz zakres usług, doświadczenie i najważniejsze informacje.
-            Nie wpisuj danych wrażliwych.
-          </p>
-        </div>
-
-        <div class="form-actions">
-          <button class="button button-primary" type="submit">
-            Dodaj ofertę
-          </button>
-          <button
-            id="close-provider-form"
-            class="button button-secondary"
-            type="button"
-          >
-            Zamknij formularz
-          </button>
-        </div>
-        <p id="provider-form-message" class="message" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <section id="uslugi" class="services" aria-labelledby="services-title"><div class="section-heading"><p class="eyebrow">Kategorie usług</p><h2 id="services-title">Jakiej pomocy szukasz?</h2><p>Dotknij kategorii, aby rozwinąć listę usług.</p></div><div class="service-grid"><article class="service-card"><details class="service-details"><summary><h3><span class="category-icons" aria-hidden="true">🔧 🪛 🛠️</span><span>Naprawy</span></h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy samochodów" data-service-name="Samochódy">Samochódy</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy rowerów" data-service-name="Rowery">Rowery</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy AGD i RTV" data-service-name="AGD i RTV">AGD i RTV</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3><span class="category-icons" aria-hidden="true">🏡 🪴 🪏</span><span>Dom i ogród</span></h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Sprzątanie" data-service-name="Sprzątanie">Sprzątanie</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Prace ogrodowe" data-service-name="Prace ogrodowe">Prace ogrodowe</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Drobne prace domowe">Drobne prace domowe</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3><span class="category-icons" aria-hidden="true">🚚 📦 🪑</span><span>Przeprowadzki</span></h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Transport">Transport</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Noszenie rzeczy">Noszenie rzeczy</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Pomoc w pakowaniu">Pomoc w pakowaniu</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3><span class="category-icons" aria-hidden="true">🤝 ❤️ 🫂</span><span>Opieka</span></h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Opieka nad zwierzętami" data-service-name="Opieka nad zwierzętami">Opieka nad zwierzętami</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Pomoc w codziennych sprawach">Pomoc w codziennych sprawach</a></div></details></article><article class="service-card"><details class="service-details"><summary><h3><span class="category-icons" aria-hidden="true">💡 🧩 🎯</span><span>Inne</span></h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Pomoc w zakupach">Pomoc w zakupach</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Porady zdalne">Porady zdalne</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Inna usługa">Inna usługa</a></div></details></article></div></section>
-
-    <section id="dodaj-zlecenie" class="request-section" aria-labelledby="request-title">
-      <div class="section-heading">
-        <p class="eyebrow">Dla osoby szukającej pomocy</p>
-        <h2 id="request-title">Dodaj zlecenie</h2>
-        <p class="lead">
-          Opisz, czego potrzebujesz. W kolejnym etapie zlecenie zostanie połączone z wykonawcami.
-        </p>
-      </div>
-
-      <form id="request-form" class="request-form">
-        <div class="form-field">
-          <label for="category">Kategoria usługi</label>
-          <select id="category" name="category" required>
-            <option value="">Wybierz kategorię</option>
-            <option>Naprawy samochodów</option>
-            <option>Naprawy rowerów</option>
-            <option>Naprawy AGD i RTV</option>
-            <option>Sprzątanie</option>
-            <option>Prace ogrodowe</option>
-            <option>Przeprowadzki</option>
-            <option>Opieka nad zwierzętami</option>
-            <option>Inna usługa</option>
-          </select>
-        </div>
-
-        <div class="form-field">
-          <label for="description">Opis zlecenia</label>
-          <textarea
-            id="description"
-            name="description"
-            rows="5"
-            minlength="20"
-            placeholder="Np. Potrzebuję naprawy pralki. Pralka nie odprowadza wody."
-            required
-          ></textarea>
-          <p class="field-help">Minimum 20 znaków. Opisz problem, miejsce wykonania usługi, ważne szczegóły i oczekiwany termin. Nie wpisuj danych wrażliwych.</p>
-        </div>
-
-        <div class="form-row">
-          <div class="form-field">
-            <label for="location">Lokalizacja</label>
-            <input
-              id="location"
-              name="location"
-              type="text"
-              placeholder="Np. Warszawa, Mokotów"
-              required
-            >
-          </div>
-
-          <div class="form-field">
-            <label for="budget">Budżet (opcjonalnie)</label>
-            <input
-              id="budget"
-              name="budget"
-              type="text"
-              inputmode="numeric"
-              placeholder="Np. 300 PLN"
-            >
-          </div>
-        </div>
-
-        <button class="button button-primary" type="submit">
-          Dodaj zlecenie
-        </button>
-        <p id="form-message" class="message" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <section class="status-section" aria-labelledby="status-title">
-      <div class="section-heading">
-        <p class="eyebrow">Stan projektu</p>
-        <h2 id="status-title">Status MVP</h2>
-      </div>
-
-      <div class="status-card">
-        <h3>Gotowe</h3>
-        <ul class="status-list">
-          <li>Strona startowa Fix&amp;Spacebook</li>
-          <li>Kategorie usług lokalnych</li>
-          <li>Formularz dodania zlecenia</li>
-          <li>Walidacja opisu: minimum 20 znaków</li>
-          <li>Test lokalny na Androidzie</li>
-        </ul>
-
-        <h3>Następny etap</h3>
-        <p class="next-step">
-          Formularz dla wykonawcy usług po kliknięciu przycisku
-          „Chcę oferować”.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>Fix&amp;Spacebook - projekt MVP lokalnych usług.</p>
-  </footer>
-
-  <script src="app.js"></script>
+<header class="topbar">
+<a class="brand" href="#start" aria-label="Fix and Spacebook — strona główna">Fix<span>&amp;</span>Spacebook</a>
+<form id="service-search-form" class="service-search" role="search">
+<button class="search-submit" type="submit" aria-label="Wyszukaj kategorię"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M16 16l5 5"></path></svg></button>
+<input id="service-search" type="search" placeholder="Szukaj usługi…" aria-label="Szukaj kategorii usług" aria-controls="uslugi" autocomplete="off">
+<button id="clear-service-search" class="search-clear" type="button" aria-label="Wyczyść wyszukiwanie" hidden>×</button>
+</form>
+<a class="topbar-link" href="#uslugi">Kategorie</a>
+</header>
+<main id="start">
+<section class="hero">
+<p class="eyebrow">Lokalne usługi w jednym miejscu</p>
+<h1>Znajdź pomoc lub zaoferuj swoje usługi.</h1>
+<p class="lead">Fix&amp;Spacebook łączy osoby, które potrzebują pomocy, z lokalnymi wykonawcami i firmami.</p>
+<div class="actions" aria-label="Wybierz dalszy krok"><a class="button button-primary" href="#dodaj-zlecenie">Szukam pomocy</a><button class="button button-secondary" type="button" data-action="provider">Chcę oferować usługi</button></div>
+<p id="message" class="message" role="status" aria-live="polite"></p>
+<noscript><p>Włącz JavaScript, aby korzystać z motywów, kart ogłoszeń i formularzy pokazowych.</p></noscript>
+</section>
+<section id="oferta-wykonawcy" class="request-section" aria-labelledby="provider-title" hidden>
+<div class="section-heading"><p class="eyebrow">Dla wykonawcy usług</p><h2 id="provider-title">Dodaj ofertę usług</h2><p class="lead">Formularz demonstracyjny. Oferta nie jest publikowana ani zapisywana na serwerze. Używaj wyłącznie fikcyjnych danych.</p></div>
+<article id="provider-preview" hidden><h3>Podgląd testowej oferty</h3><p>Tu po wysłaniu formularza pojawi się oferta.</p></article>
+<form id="provider-form" class="request-form">
+<div class="form-field"><label for="provider-name">Nazwa wykonawcy lub firmy</label><input id="provider-name" name="providerName" type="text" autocomplete="off" placeholder="Np. Przykładowy serwis rowerowy" required></div>
+<div class="form-field"><label for="provider-category">Kategoria usługi</label><select id="provider-category" name="providerCategory" required><option value="">Wybierz kategorię</option><option>Naprawy samochodów</option><option>Naprawy rowerów</option><option>Naprawy AGD i RTV</option><option>Sprzątanie</option><option>Prace ogrodowe</option><option>Przeprowadzki</option><option>Opieka nad zwierzętami</option><option>Inna usługa</option></select></div>
+<div class="form-row"><div class="form-field"><label for="provider-location">Lokalizacja</label><input id="provider-location" name="providerLocation" type="text" placeholder="Np. Warszawa, Mokotów" required></div><div class="form-field"><label for="provider-area">Promień dojazdu</label><select id="provider-area" name="providerArea" required><option value="">Wybierz promień</option><option value="0">Tylko w mieście</option><option value="10">Do 10 km</option><option value="25">Do 25 km</option><option value="50">Do 50 km</option><option value="100">Do 100 km</option><option value="indywidualnie">Ustalę indywidualnie</option></select></div></div>
+<div class="form-field"><label for="provider-description">Opis oferty i doświadczenia</label><textarea id="provider-description" name="providerDescription" rows="5" minlength="20" placeholder="Np. Oferuję regulację hamulców i przerzutek w rowerach." required></textarea><p class="field-help">Minimum 20 znaków. Dane wyłącznie przykładowe, bez informacji osobowych.</p></div>
+<div class="form-actions"><button class="button button-primary" type="submit">Pokaż testową ofertę</button><button id="close-provider-form" class="button button-secondary" type="button">Zamknij formularz</button></div>
+<p id="provider-form-message" class="message" role="status" aria-live="polite"></p>
+</form>
+</section>
+<section id="uslugi" class="services" aria-labelledby="services-title">
+<div class="section-heading"><p class="eyebrow">Kategorie usług</p><h2 id="services-title">Jakiej pomocy szukasz?</h2><p>Dotknij kategorii, aby rozwinąć listę usług.</p></div>
+<div class="service-grid">
+<article class="service-card"><details class="service-details"><summary><h3>Naprawy</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy samochodów" data-service-name="Samochody">Samochody</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy rowerów" data-service-name="Rowery">Rowery</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Naprawy AGD i RTV" data-service-name="AGD i RTV">AGD i RTV</a></div></details></article>
+<article class="service-card"><details class="service-details"><summary><h3>Dom i ogród</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Sprzątanie" data-service-name="Sprzątanie">Sprzątanie</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Prace ogrodowe" data-service-name="Prace ogrodowe">Prace ogrodowe</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Drobne prace domowe">Drobne prace domowe</a></div></details></article>
+<article class="service-card"><details class="service-details"><summary><h3>Przeprowadzki</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Transport">Transport</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Noszenie rzeczy">Noszenie rzeczy</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Przeprowadzki" data-service-name="Pomoc w pakowaniu">Pomoc w pakowaniu</a></div></details></article>
+<article class="service-card"><details class="service-details"><summary><h3>Opieka</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Opieka nad zwierzętami" data-service-name="Opieka nad zwierzętami">Opieka nad zwierzętami</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Pomoc w codziennych sprawach">Pomoc w codziennych sprawach</a></div></details></article>
+<article class="service-card"><details class="service-details"><summary><h3>Inne</h3></summary><p class="service-hint">Wybierz usługę:</p><div class="service-options"><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Pomoc w zakupach">Pomoc w zakupach</a><a class="service-option" href="#dodaj-zlecenie" data-service-category="Inna usługa" data-service-name="Inna usługa">Inna usługa</a></div></details></article>
+</div>
+</section>
+<section id="dodaj-zlecenie" class="request-section" aria-labelledby="request-title">
+<div class="section-heading"><p class="eyebrow">Dla osoby szukającej pomocy</p><h2 id="request-title">Dodaj zlecenie — podgląd</h2><p class="lead">Przykładowy formularz. Nie publikuje ogłoszenia ani nie wysyła danych na serwer.</p></div>
+<form id="request-form" class="request-form">
+<div class="form-field"><label for="category">Kategoria usługi</label><select id="category" name="category" required><option value="">Wybierz kategorię</option><option>Naprawy samochodów</option><option>Naprawy rowerów</option><option>Naprawy AGD i RTV</option><option>Sprzątanie</option><option>Prace ogrodowe</option><option>Przeprowadzki</option><option>Opieka nad zwierzętami</option><option>Inna usługa</option></select></div>
+<div class="form-field"><label for="description">Opis zlecenia</label><textarea id="description" name="description" rows="5" minlength="20" placeholder="Np. Potrzebuję naprawy pralki. Pralka nie odprowadza wody." required></textarea><p class="field-help">Minimum 20 znaków. Nie wpisuj prawdziwych danych ani danych kontaktowych.</p></div>
+<div class="form-row"><div class="form-field"><label for="location">Lokalizacja</label><input id="location" name="location" type="text" placeholder="Np. Warszawa, Mokotów" required></div><div class="form-field"><label for="budget">Budżet (opcjonalnie)</label><input id="budget" name="budget" type="text" inputmode="decimal" placeholder="Np. 300 PLN"></div></div>
+<button class="button button-primary" type="submit">Sprawdź testowe zlecenie</button><p id="form-message" class="message" role="status" aria-live="polite"></p>
+</form>
+</section>
+</main>
+<footer class="footer"><p>Fix&amp;Spacebook — prototyp demonstracyjny. Konta, płatności i trwała publikacja ogłoszeń nie są dostępne w tej wersji.</p></footer>
+<script src="app.js"></script>
+<script src="presentation.js"></script>
 </body>
 </html>
